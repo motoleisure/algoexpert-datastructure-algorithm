@@ -33,7 +33,7 @@ def twoNumberSum(array, targetSum):
 	return []
 ```
 
-#### Solution 2，遍历一遍列表，利用字典的key值存储还没paired的数字，当前的diff = targetSum - num, 然后去查找diff是否在字典的keys中，如果在，那么就找到了一对。
+#### Solution 2，hash table，遍历一遍列表，利用字典的key值存储还没paired的数字，当前的diff = targetSum - num, 然后去查找diff是否在字典的keys中，如果在，那么就找到了一对。
 - Time : O(n) | Space : O(n)
 ```python
 def twoNumberSum(array, targetSum):
