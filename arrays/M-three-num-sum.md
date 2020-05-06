@@ -14,4 +14,25 @@ targetSum = 0
 
 ### Solutions
 #### Solution 1, 先对列表排序，然后暴力破解
+- Time : O(n^3) | Space : O(n)
+```python
+def threeNumberSum(array, targetSum):
+    # Write your code here.
+    array.sort()
+    ans = []
+    ll = len(array)
+    for i in range(ll-2):
+		  firstNum = array[i]
+		  for j in range(i+1, ll-1):
+			  secondNum = array[j]
+			  for k in range(j+1, ll):
+				  thirdNum = array[k]
+				  if firstNum + secondNum + thirdNum == targetSum:
+					  ans.append([firstNum, secondNum, thirdNum])
+	return ans
+```
+#### Solution 2, 先对列表排序，然后选定第一个数字，后两个数字在后面排序列表中用二分法求解
+- Time : O(n^2) | Space : O(n)
+```python
 
+```
