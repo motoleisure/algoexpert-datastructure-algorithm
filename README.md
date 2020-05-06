@@ -1,2 +1,2 @@
-# leetcode_practice
-Leetcode learning by Python3
+# algoexpert course 1 datastructure and algorithm
+
