@@ -21,18 +21,35 @@ def threeNumberSum(array, targetSum):
     array.sort()
     ans = []
     ll = len(array)
-    for i in range(ll-2):
-		  firstNum = array[i]
-		  for j in range(i+1, ll-1):
-			  secondNum = array[j]
-			  for k in range(j+1, ll):
-				  thirdNum = array[k]
-				  if firstNum + secondNum + thirdNum == targetSum:
-					  ans.append([firstNum, secondNum, thirdNum])
-	return ans
+    for i in range(ll - 2):
+        firstNum = array[i]
+        for j in range(i + 1, ll - 1):
+            secondNum = array[j]
+            for k in range(j + 1, ll):
+                thirdNum = array[k]
+                if firstNum + secondNum + thirdNum == targetSum:
+                    ans.append([firstNum, secondNum, thirdNum])
+    return ans
 ```
 #### Solution 2, 先对列表排序，然后选定第一个数字，后两个数字在后面排序列表中用二分法求解
 - Time : O(n^2) | Space : O(n)
 ```python
-
+def threeNumberSum(array, targetSum):
+    # Write your code here.
+    array.sort()
+    triplets = []
+    for i in range(len(array) - 2):
+        left = i + 1
+        right = len(array) - 1
+        while left < right:
+            currentSum = array[i] + array[left] + array[right]
+            if currentSum == targetSum:
+                triplets.append([array[i], array[left], array[right]])
+                left += 1
+                right -= 1
+            elif currentSum < targetSum:
+                left += 1
+            else:
+                right -= 1
+    return triplets
 ```
