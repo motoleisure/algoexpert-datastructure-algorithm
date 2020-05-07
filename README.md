@@ -1,4 +1,5 @@
 # algoexpert course 1 datastructure and algorithm
+- [**Algorithm solution list**](algoList.md)
 - use language : **Python**
 - [python基本数据类型的时间复杂度](https://www.jianshu.com/p/a8fa3d31aa40)
 
