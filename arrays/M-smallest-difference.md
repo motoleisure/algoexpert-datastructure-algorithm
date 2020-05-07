@@ -15,9 +15,7 @@ arrayTwo = [26, 134, 135, 15, 17]
 
 ### Solutions
 #### Solution 1, 先排序，然后用两个指针指向两个列表的最左边，然后计算两个数字的绝对值，如果等于0，那么这就是最理想的答案，如果不等于0，那么比较两个数字大小，小的数字往下移动一位，直到某一个指针遍历完成位置。在过程中，我们另外要保存一个最小差（不等于0）的数值的两个数字，最后返回这个数字pairs。
-- Time : O(n^2) | Space : O(1)
 
-#### Solution 2,
 - Time : O(nlog(n)) + O(mlog(m)) | Space : O(1)
 ```python
 def smallestDifference(arrayOne, arrayTwo):
