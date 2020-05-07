@@ -66,3 +66,6 @@ def twoNumberSum(array, targetSum):
             right -= 1
     return []
 ````
+## 解题核心思想
+### 无序的数组处理起来看似没什么技巧，但是排序过后，我们就可以利用双指针来处理问题
+### 无序的数组我们还可以用hash table来处理，因为hash table的find功能是O(1)
